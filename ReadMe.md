@@ -18,7 +18,7 @@
 > * 版权
 
 ### 介绍
-该PEP建议修改try语句的语法和语义，以允许组合try- exception -finally块。简而言之，以下写法有效:
+该PEP是建议修改try语句的语法和语义，以允许组合try- exception -finally模块。简而言之就是能够让以下写法有效:
 ```python
 try:
     <do something>
@@ -28,7 +28,7 @@ finally:
     <cleanup>
 ```
 ### 原理建议
-try-except语句和try-finally语句本身有很多用例; 然而，通常需要捕获异常并在事后执行一些清理代码。这有点麻烦，并且不是很容易理解，必须写:
+try-except语句和try-finally语句本身有很多使用场景，然而，使用时通常需要捕获异常并在事后执行一些清理代码。这有点麻烦，并且不是很容易理解，必须写成以下代码:
 ```python
 f = None
 try:
@@ -41,7 +41,7 @@ finally:
     if f:
         f.close()
 ```
-因此，有人提出这样一种结构：
+因此，有人提出这样一种结构，如下：
 ```python
 try:
     <suite 1>
@@ -53,7 +53,7 @@ else:
 finally:
     <suite 4>
 ```
-于此完全相同：
+于此种写法完全相同：
 ```python
 try:
     try:
