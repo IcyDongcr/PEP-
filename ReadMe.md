@@ -92,6 +92,8 @@ try_stmt: 'try' ':' suite
 
 ### 参考
 [1] https://mail.python.org/pipermail/python-dev/2005-May/053319.html
+
 [2] https://bugs.python.org/issue1355913
+
 [3] https://mail.python.org/pipermail/python-checkins/2005-December/048457.html
 
